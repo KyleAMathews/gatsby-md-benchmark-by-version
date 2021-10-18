@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import Link from "gatsby-link"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,7 +10,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { previous, next } = this.props.pathContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
